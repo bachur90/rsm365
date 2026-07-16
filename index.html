@@ -1,26 +1,340 @@
 <!doctype html>
 <html lang="pl">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>RSM365</title>
-  <meta name="description" content="RSM365 — strona w przygotowaniu." />
-  <style>
-    :root { color-scheme: dark; }
-    body {
-      margin: 0; min-height: 100vh; display: grid; place-items: center;
-      background: #0d1117; color: #e6edf3;
-      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
-    }
-    main { text-align: center; padding: 24px; }
-    h1 { font-size: clamp(40px, 8vw, 72px); margin: 0; letter-spacing: 0.04em; }
-    p { color: #8b949e; margin-top: 14px; font-size: 18px; }
-  </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>RSM365 — Bezpieczeństwo Microsoft 365 | Audyt, wdrożenie, utrzymanie, szkolenia</title>
+<meta name="description" content="RSM365 — pełne bezpieczeństwo Microsoft 365 bez komplikacji i bez ryzyka. Audyty zgodne z ISO 27001, NIS2 i RODO, wdrożenia MFA i Zero Trust, monitoring, szkolenia." />
+<meta name="theme-color" content="#ffffff" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="RSM365 — Bezpieczeństwo Microsoft 365" />
+<meta property="og:description" content="Zadbaj o pełne bezpieczeństwo Microsoft 365. Bez komplikacji, bez ryzyka. Audyt · Wdrożenie · Utrzymanie · Szkolenia." />
+<meta property="og:locale" content="pl_PL" />
+<meta property="og:url" content="https://bachur90.github.io/rsm365/" />
+<meta property="og:image" content="https://bachur90.github.io/rsm365/assets/img/logo.png" />
+
+<link rel="icon" href="assets/img/logo.png" type="image/png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/styles.css" />
+
+<script type="importmap">
+{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js" } }
+</script>
 </head>
 <body>
-  <main>
-    <h1>RSM365</h1>
-    <p>Strona w przygotowaniu.</p>
-  </main>
+
+<a class="skip-link" href="#main">Przejdź do treści</a>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top" aria-label="RSM365 — strona główna">
+      <img class="brand-logo" src="assets/img/logo.png" alt="" width="40" height="40" />
+      <span class="brand-name">RSM<span class="brand-365">365</span></span>
+    </a>
+
+    <nav class="nav" aria-label="Główna nawigacja">
+      <a href="#oferta">Oferta</a>
+      <a href="#zakres">Zakres działań</a>
+      <a href="#o-nas">O nas</a>
+      <a href="#wspolpraca">Współpraca</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+
+    <a href="#kontakt" class="btn btn-solid btn-sm header-cta">Bezpłatna konsultacja</a>
+
+    <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Otwórz menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div class="mobile-nav" id="mobile-nav" hidden>
+    <a href="#oferta">Oferta</a>
+    <a href="#zakres">Zakres działań</a>
+    <a href="#o-nas">O nas</a>
+    <a href="#wspolpraca">Współpraca</a>
+    <a href="#kontakt">Kontakt</a>
+    <a href="#kontakt" class="btn btn-solid">Bezpłatna konsultacja</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" aria-labelledby="hero-title">
+    <canvas id="hero-canvas" aria-hidden="true"></canvas>
+
+    <div class="wrap hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow">Bezpieczeństwo Microsoft 365</p>
+        <h1 id="hero-title" class="hero-title">
+          Pełne bezpieczeństwo <span class="grad-text">Microsoft&nbsp;365</span>.<br />
+          Bez komplikacji, bez ryzyka.
+        </h1>
+        <p class="hero-lead">
+          Wspieramy firmy w konfiguracji zabezpieczeń, polityk, automatyzacji
+          i testach bezpieczeństwa Microsoft&nbsp;365 — od audytu po codzienną opiekę.
+        </p>
+        <div class="hero-actions">
+          <a href="#kontakt" class="btn btn-solid">Umów bezpłatną konsultację</a>
+          <a href="#oferta" class="btn btn-ghost">Zobacz ofertę</a>
+        </div>
+        <ul class="hero-badges" aria-label="Standardy i regulacje">
+          <li>ISO 27001</li>
+          <li>NIS2</li>
+          <li>RODO</li>
+          <li>NIST</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TECH STRIP ================= -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Microsoft Entra ID</span><span class="sep">·</span>
+      <span>Defender XDR</span><span class="sep">·</span>
+      <span>Microsoft Sentinel</span><span class="sep">·</span>
+      <span>Intune</span><span class="sep">·</span>
+      <span>Exchange Online Protection</span><span class="sep">·</span>
+      <span>Microsoft Purview</span><span class="sep">·</span>
+      <span>Teams</span><span class="sep">·</span>
+      <span>SharePoint</span><span class="sep">·</span>
+      <span>OneDrive</span><span class="sep">·</span>
+      <span>Microsoft Entra ID</span><span class="sep">·</span>
+      <span>Defender XDR</span><span class="sep">·</span>
+      <span>Microsoft Sentinel</span><span class="sep">·</span>
+      <span>Intune</span><span class="sep">·</span>
+      <span>Exchange Online Protection</span><span class="sep">·</span>
+      <span>Microsoft Purview</span><span class="sep">·</span>
+      <span>Teams</span><span class="sep">·</span>
+      <span>SharePoint</span><span class="sep">·</span>
+      <span>OneDrive</span><span class="sep">·</span>
+    </div>
+  </div>
+
+  <!-- ================= OFERTA ================= -->
+  <section class="section offer" id="oferta" aria-labelledby="offer-title">
+    <div class="wrap">
+      <header class="section-head" data-reveal>
+        <p class="eyebrow">Oferta</p>
+        <h2 id="offer-title" class="section-title">Cztery filary bezpieczeństwa Microsoft&nbsp;365</h2>
+        <p class="section-sub">Wspieramy organizacje na każdym etapie — od diagnozy, przez wdrożenie, aż po codzienną opiekę i budowanie kultury cyberbezpieczeństwa.</p>
+      </header>
+
+      <div class="offer-grid">
+        <article class="pillar pillar-audyt" data-reveal>
+          <span class="pillar-num">01</span>
+          <h3 class="pillar-title">Audyt M365</h3>
+          <p class="pillar-desc">Dokładna diagnoza Twojego środowiska: luki, błędy konfiguracyjne i zgodność z RODO, ISO&nbsp;27001 i NIS2. Otrzymujesz raport z poziomem ryzyka i konkretnymi rekomendacjami.</p>
+          <ul class="pillar-list">
+            <li>Analiza kont i uprawnień (Entra ID, role, Global Admin)</li>
+            <li>Weryfikacja MFA, SSPR i dostępu warunkowego</li>
+            <li>Ocena ochrony danych: DLP, etykiety, retencja, szyfrowanie</li>
+          </ul>
+        </article>
+
+        <article class="pillar pillar-wdrozenie" data-reveal>
+          <span class="pillar-num">02</span>
+          <h3 class="pillar-title">Wdrożenie zabezpieczeń</h3>
+          <p class="pillar-desc">Na podstawie audytu wdrażamy brakujące mechanizmy ochrony — zgodnie z normami i najlepszymi praktykami, bez zbędnego obciążania Twojego zespołu.</p>
+          <ul class="pillar-list">
+            <li>MFA, logika Zero Trust i polityki dostępu warunkowego</li>
+            <li>DLP, klasyfikacja i polityki retencji w SharePoint/OneDrive</li>
+            <li>Microsoft Defender: phishing, malware, Safe Links</li>
+          </ul>
+        </article>
+
+        <article class="pillar pillar-utrzymanie" data-reveal>
+          <span class="pillar-num">03</span>
+          <h3 class="pillar-title">Utrzymanie bezpieczeństwa</h3>
+          <p class="pillar-desc">Bezpieczeństwo to proces. Pakiety stałego wsparcia tworzą spokój operacyjny — Ty koncentrujesz się na rozwoju biznesu.</p>
+          <ul class="pillar-list">
+            <li>Monitoring alertów i integracja z Defender XDR, Sentinel</li>
+            <li>Regularne przeglądy konfiguracji i alerty o odchyleniach</li>
+            <li>Testy phishingowe i reagowanie na incydenty</li>
+          </ul>
+        </article>
+
+        <article class="pillar pillar-szkolenia" data-reveal>
+          <span class="pillar-num">04</span>
+          <h3 class="pillar-title">Szkolenia i kultura bezpieczeństwa</h3>
+          <p class="pillar-desc">Najlepsze zabezpieczenia nie zadziałają, jeśli zawiedzie człowiek. Szkolimy pracowników, IT i kadrę zarządzającą — praktycznie i zrozumiale.</p>
+          <ul class="pillar-list">
+            <li>RODO i zgodność w Microsoft 365 w praktyce</li>
+            <li>Symulacje phishingowe i testy socjotechniczne</li>
+            <li>SZBI wg ISO/IEC 27001 i reagowanie na incydenty</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ZAKRES ================= -->
+  <section class="section scope" id="zakres" aria-labelledby="scope-title">
+    <div class="wrap">
+      <header class="section-head" data-reveal>
+        <p class="eyebrow">Zakres działań</p>
+        <h2 id="scope-title" class="section-title">Czym zajmujemy się na co dzień</h2>
+      </header>
+
+      <div class="scope-grid">
+        <div class="scope-item" data-reveal>
+          <h3>Audyt i konfiguracja</h3>
+          <p>Ocena konfiguracji M365 pod kątem najlepszych praktyk (NIST, ISO&nbsp;27001). Exchange Online Protection, Defender for Office&nbsp;365.</p>
+        </div>
+        <div class="scope-item" data-reveal>
+          <h3>Polityki i MFA</h3>
+          <p>Wdrażanie i utrzymanie logiki Zero Trust i MFA. Polityki dostępu, retencji, DLP i klasyfikacji w SharePoint i OneDrive.</p>
+        </div>
+        <div class="scope-item" data-reveal>
+          <h3>Automatyzacja i skanowanie</h3>
+          <p>Automatyczne ustawienia zabezpieczeń i raportowania. Regularne skanowanie konfiguracji i alerty o odchyleniach.</p>
+        </div>
+        <div class="scope-item" data-reveal>
+          <h3>Monitorowanie i reagowanie</h3>
+          <p>Integracja z Defender XDR, Sentinel i Copilot — szybka identyfikacja i reakcja. Alerty, logi, raporty.</p>
+        </div>
+        <div class="scope-item" data-reveal>
+          <h3>Ochrona poczty i danych</h3>
+          <p>Szyfrowanie poczty, blokowanie forwardingu, konfiguracja narzędzi ochrony danych w całym środowisku M365.</p>
+        </div>
+        <div class="scope-item" data-reveal>
+          <h3>Testy i symulacje ataków</h3>
+          <p>Symulacje phishingowe, testy socjotechniczne i szkolenia pracowników w środowisku Microsoft&nbsp;365.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= DLACZEGO ================= -->
+  <section class="section why" aria-labelledby="why-title">
+    <div class="wrap why-grid">
+      <div class="why-copy" data-reveal>
+        <p class="eyebrow">Dlaczego RSM365</p>
+        <h2 id="why-title" class="section-title">Partner technologiczny i&nbsp;doradczy</h2>
+        <p class="lead">Nie tylko wdrażamy — myślimy strategicznie. Łączymy technologię z przepisami prawa i rzeczywistością operacyjną firm. I mówimy ludzkim językiem, nawet o najbardziej złożonych kwestiach.</p>
+        <ul class="why-list">
+          <li><strong>Eksperci w M365</strong> — bezpieczeństwo Microsoft 365 to nasza specjalizacja.</li>
+          <li><strong>Kompleksowe wsparcie</strong> — od konfiguracji po automatyzację i reagowanie.</li>
+          <li><strong>Efektywność i oszczędność</strong> — działamy zdalnie, nie zatrudniasz dodatkowego zespołu.</li>
+          <li><strong>Proaktywna ochrona</strong> — symulacje, alerty i stała kontrola bezpieczeństwa.</li>
+        </ul>
+      </div>
+      <figure class="why-visual" data-reveal>
+        <img src="assets/img/monitoring.jpg" alt="Analiza raportów bezpieczeństwa na laptopie" loading="lazy" width="800" height="453" />
+        <figcaption class="visual-tag">Monitoring · Raporty · Zgodność</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ================= O NAS ================= -->
+  <section class="section about" id="o-nas" aria-labelledby="about-title">
+    <div class="wrap">
+      <header class="section-head" data-reveal>
+        <p class="eyebrow">O nas</p>
+        <h2 id="about-title" class="section-title">Zespół specjalistów M365 i&nbsp;cyberbezpieczeństwa</h2>
+        <p class="section-sub">Pomagamy firmom skonfigurować polityki bezpieczeństwa, wdrożyć MFA, zabezpieczyć e-mail, Teams, SharePoint i OneDrive oraz automatyzować procesy ochrony. Działamy zdalnie, skutecznie i niezawodnie.</p>
+      </header>
+
+      <div class="about-grid">
+        <figure class="about-visual" data-reveal>
+          <img src="assets/img/team.jpg" alt="Zespół podczas pracy nad dokumentacją przy laptopach" loading="lazy" width="1181" height="787" />
+        </figure>
+        <div class="about-cards">
+          <div class="mv-card mv-misja" data-reveal>
+            <h3>Misja</h3>
+            <p>Wspierać organizacje w efektywnej, bezpiecznej i zrównoważonej pracy z Microsoft&nbsp;365. Łączymy wiedzę ekspercką z technologią, aby każdy klient mógł skoncentrować się na swoim kluczowym biznesie.</p>
+          </div>
+          <div class="mv-card mv-wizja" data-reveal>
+            <h3>Wizja</h3>
+            <p>Być partnerem pierwszego wyboru w zakresie bezpieczeństwa M365 — firmą, która wyznacza standardy jakości, bezpieczeństwa i innowacyjności w zarządzaniu nowoczesnymi środowiskami pracy.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="team-grid">
+        <div class="person" data-reveal>
+          <blockquote>„Wierzę, że jeśli pokażesz ludziom problemy i wskażesz rozwiązania, będą gotowi działać."</blockquote>
+          <p class="person-quote-by">— Bill Gates</p>
+          <a class="person-mail" href="mailto:tomasz.thiede@rsm365.eu">tomasz.thiede@rsm365.eu</a>
+        </div>
+        <div class="person" data-reveal>
+          <blockquote>„Żyję, by tworzyć wartość dla innych. To czyni każdy mój dzień wartościowym."</blockquote>
+          <p class="person-quote-by">— Muhammad Yunus</p>
+          <a class="person-mail" href="mailto:agnieszka.polska@rsm365.eu">agnieszka.polska@rsm365.eu</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= WSPÓŁPRACA ================= -->
+  <section class="section partners" id="wspolpraca" aria-labelledby="partners-title">
+    <div class="wrap">
+      <header class="section-head" data-reveal>
+        <p class="eyebrow">Współpraca</p>
+        <h2 id="partners-title" class="section-title">Sieć partnerów RSM365</h2>
+        <p class="section-sub">Najlepsze rezultaty osiąga się dzięki współpracy opartej na zaufaniu i wspólnych celach. Budujemy sieć sprawdzonych wykonawców, specjalistów i dostawców technologii.</p>
+      </header>
+
+      <div class="partner-grid">
+        <div class="partner-item" data-reveal>
+          <h3>Formuła konsorcjum</h3>
+          <p>Projekty realizujemy w modelu partnerskim, łącząc siły ekspertów z różnych dziedzin. Elastycznie skalujemy zasoby — każde zadanie wykonują najlepsi w branży.</p>
+        </div>
+        <div class="partner-item" data-reveal>
+          <h3>Przejrzyste zasady</h3>
+          <p>Współpracujemy na jasnych warunkach — szanujemy czas, kompetencje i niezależność partnerów. Dzielimy się wiedzą i wspólną odpowiedzialnością za efekt.</p>
+        </div>
+        <div class="partner-item" data-reveal>
+          <h3>Wspólny rozwój</h3>
+          <p>Partnerzy RSM365 mają dostęp do innowacyjnych narzędzi, szkoleń i wsparcia ekspertów. Razem podnosimy standardy obsługi i budujemy przewagę konkurencyjną.</p>
+        </div>
+      </div>
+
+      <p class="partner-cta" data-reveal>
+        Realizujesz projekty w duchu jakości i zaufania?
+        <a class="btn btn-ghost" href="mailto:tomasz.thiede@rsm365.eu?subject=Partnerstwo%20RSM365">Dołącz do partnerów RSM365</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= KONTAKT ================= -->
+  <section class="section contact" id="kontakt" aria-labelledby="contact-title">
+    <div class="wrap contact-inner" data-reveal>
+      <img class="contact-logo" src="assets/img/logo.png" alt="" width="72" height="72" />
+      <h2 id="contact-title" class="section-title">Zadbaj o bezpieczeństwo swojej organizacji,<br class="br-wide" /> zanim zrobi to ktoś inny.</h2>
+      <p class="section-sub">Masz pytania? Chcesz ofertę dedykowaną dla Twojej firmy? Napisz do nas — dobierzemy model współpracy do Twoich potrzeb.</p>
+      <div class="contact-actions">
+        <a class="btn btn-solid" href="mailto:tomasz.thiede@rsm365.eu?subject=Konsultacja%20RSM365">Napisz do nas</a>
+        <a class="btn btn-ghost" href="#oferta">Zacznij od audytu</a>
+      </div>
+      <p class="contact-meta">RSM365 sp. z o.o. &nbsp;·&nbsp; NIP 5243037980</p>
+    </div>
+  </section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <a class="brand" href="#top" aria-label="RSM365 — góra strony">
+      <img class="brand-logo" src="assets/img/logo.png" alt="" width="34" height="34" />
+      <span class="brand-name">RSM<span class="brand-365">365</span></span>
+    </a>
+    <p class="footer-tag">Bezpieczeństwo Microsoft 365 — audyt, wdrożenie, utrzymanie, szkolenia.</p>
+    <nav class="footer-nav" aria-label="Stopka">
+      <a href="#oferta">Oferta</a>
+      <a href="#o-nas">O nas</a>
+      <a href="#wspolpraca">Współpraca</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <p class="footer-legal">© <span id="year">2026</span> RSM365 sp. z o.o. · NIP 5243037980 · Wszystkie prawa zastrzeżone.</p>
+  </div>
+</footer>
+
+<script type="module" src="assets/js/main.js"></script>
 </body>
 </html>
